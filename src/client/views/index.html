@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <header>
+        <title>Travel App</title>
+        <link href="../styles/style.scss" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </header>
+    <body>
+        <h1>The world is your oyster...</h1>
+        <div id="entryHolder">
+            <div id="where">
+                <label for="tripto">Where to?</label>
+                <input id="tripto" type="text" placeholder="City, Country">
+            </div>
+            <div id="when">
+                <label for="departingdate">When?</label>
+                <input id="departingdate" type="date" placeholder="DD/MM/YYYY">
+            </div>
+        </div>
+        <div id="managetrips">
+            <button id="generate">Take me there</button>
+            <button id="removetrip">Remove Last Added Trip</button>
+        </div>       
+        <div id="trips"></div>
+    </body>
+</html>
