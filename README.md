@@ -10,3 +10,12 @@ Run: "npm run build-prod" in your terminal.
 ## Important Files of the Project
 The src folder includes both of the client and server sides. The dist folder is the bundled folder created by webpack. Package.json & package-lock.json include the list and details of all dependencies. APIs used: Geonames, Weatherbit & Pixabay.
 
+## To run the project in Production Mode
+Run: "npm run build-prod" in your terminal.
+
+## Important Files of the Project
+
+The src folder includes both of the client and server sides.
+The dist folder is the bundled folder created by webpack.
+Package.json & package-lock.json include the list and details of all dependencies.
+APIs used: Geonames, Weatherbit & Pixabay.
