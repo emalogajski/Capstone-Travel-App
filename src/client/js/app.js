@@ -5,6 +5,8 @@ dotenv.config();
 const basePath = 'http://localhost:3000';
 const tripData = [];
 
+// displayData function places the incoming information into the appropriate HTML sections for
+// the user to see
 const displayData = () => {
   const newDiv = document.createElement('div');
   const image = document.createElement('img');
@@ -40,6 +42,8 @@ const displayData = () => {
   }
 };
 
+// getTravelData function receives the data from API calls and passes it onto 
+// the displayData funciton
 const getTravelData = async () => {
   const destination = document.getElementById('tripto').value;
   const res = await fetch(`${basePath}/traveldata?placename=${destination}`);
@@ -59,6 +63,7 @@ const getTravelData = async () => {
   }
 };
 
+// removeTrip function removes the last added trip from the Travel Plan list
 const removeTrip = () => {
   const tripList = document.getElementById('trips');
   const h2 = document.getElementsByTagName('h2');

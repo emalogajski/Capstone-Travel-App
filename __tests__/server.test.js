@@ -8,7 +8,7 @@ jest.mock('../src/server/API', () => ({
     jest.fn(() => Promise.resolve({ data: { data: [{ temp: 31, clouds: 100 }] } })),
 }));
 
-describe('Check if APIs are working', () => {
+describe('getTravelData', () => {
   test('Object data gets returned with all data from the 3 different APIs', async () => {
     const req = { query: { placename: 'Test Place' } };
     const res = { send: jest.fn() };

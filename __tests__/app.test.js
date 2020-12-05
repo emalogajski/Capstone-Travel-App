@@ -1,5 +1,3 @@
-// import { removeTrip } from '../src/client/js/app';
-
 const { removeTrip } = require('../src/client/js/app');
 
 describe('removeTrip button', () => {

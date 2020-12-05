@@ -1,13 +1,14 @@
 const { getGeonamesData, getWeatherbitData, getPixabayData } = require('./API');
 
+/**
+ * calls 3 APIs and collects their data
+ * @param {object} req request object (express)
+ * @param {object} res response object (express)
+ */
 async function getTravelData(req, res) {
   const destination = req.query.placename;
   const geonamesData = await getGeonamesData(destination);
-  console.log('geonamesData :>> ', geonamesData);
   const { lat, lng } = geonamesData.data.postalCodes[0];
-
-  console.log('lat :>> ', lat);
-  console.log('lng :>> ', lng);
 
   const weatherData = await getWeatherbitData(lat, lng);
   const { temp, clouds } = weatherData.data.data[0];
