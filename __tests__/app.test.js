@@ -1,12 +1,19 @@
-import { removeTrip } from './src/client/js/app';
+// import { removeTrip } from '../src/client/js/app';
 
 describe('removeTrip button', () => {
   test('Trip gets removed when removeTrip button is clicked', () => {
-    const tripList = document.getElementsByClassName('trip');
-    const tripListLength = tripList.length;
+    const tripList = document.getElementById('trips');
+    const removeButton = document.getElementById('removetrip');
 
-    removeTrip.onclick();
+    document.body.innerHTML = `<div id="managetrips">
+    <button id="generate">Take me there</button>
+    <button id="removetrip">Remove Last Added Trip</button>
+</div><div id="trips">
+    <div class="trips"></div>
+    </div>`;
 
-    expect(tripList.length - tripListLength === 1).toBeTruthy();
+    removeButton.click();
+
+    expect(tripList.childNodes.length === 0).toBeTruthy();
   });
 });

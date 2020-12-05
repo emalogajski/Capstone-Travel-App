@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+
+  "jest": {
+    "modulePaths":[
+      "<rootDir>/__tests__",
+      "<rootDir>/src"
+    ]
+  },
   "scripts": {
     "test": "jest",
     "start": "node src/server/server.js",

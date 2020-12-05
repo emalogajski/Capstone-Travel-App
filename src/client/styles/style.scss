@@ -55,11 +55,15 @@ input {
     margin: 8px 0 8px 0;
 }
 
+input:hover {
+    box-shadow: 2px 4px 5px #7765dd;
+}
+
 button {
     display: block;
     width: 250px;
     height: 60px;
-    background: #8677db;
+    background: #7765dd;
     color: #f3f187;
     font-size: 25px;
     font-family: 'Oswald', sans-serif;
@@ -67,6 +71,10 @@ button {
     box-shadow: 2px 4px 5px #444;
     margin: auto;
     cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 2px 4px 5px #f3f187;
 }
 
 #managetrips {
@@ -90,6 +98,7 @@ button {
 
 #trips {
     display: flex;
+    flex-direction: column;
 }
 
 .trips img {
