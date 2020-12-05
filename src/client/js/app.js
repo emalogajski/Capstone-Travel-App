@@ -63,12 +63,12 @@ const removeTrip = () => {
   const tripList = document.getElementById('trips');
   const h2 = document.getElementsByTagName('h2');
   const removeButton = document.getElementById('removetrip');
-  if (tripList.childNodes.length <= 1) {
+  if (tripList.children.length <= 1) {
     h2[0].textContent = 'Your Travel Plan is currently empty.';
-    tripList.removeChild(tripList.childNodes[0]);
+    tripList.removeChild(tripList.children[0]);
     removeButton.style.display = 'none';
-  } else if (tripList.childNodes.length > 1) {
-    tripList.removeChild(tripList.childNodes[0]);
+  } else if (tripList.children.length > 1) {
+    tripList.removeChild(tripList.children[0]);
   }
 };
 

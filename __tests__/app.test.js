@@ -1,6 +1,6 @@
 // import { removeTrip } from '../src/client/js/app';
 
-const { removeTrip } = require("../src/client/js/app");
+const { removeTrip } = require('../src/client/js/app');
 
 describe('removeTrip button', () => {
   test('Trip gets removed when removeTrip button is clicked', () => {
@@ -9,11 +9,15 @@ describe('removeTrip button', () => {
     <button id="removetrip">Remove Last Added Trip</button>
     </div><div id="trips">
     <div class="trips"></div>
+    <div class="trips"></div>
+    <div class="trips"></div>
     </div>`;
 
     const tripList = document.getElementById('trips');
-    const tripListLength = tripList.childNodes.length;
+    const tripListLengthBefore = tripList.children.length;
+    expect(tripListLengthBefore).toBe(3);
     removeTrip();
-    expect(tripListLength - tripList.childNodes.length === 1).toBeTruthy();
+    const tripListLengthAfter = tripList.children.length;
+    expect(tripListLengthAfter).toBe(2);
   });
 });
