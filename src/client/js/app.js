@@ -42,7 +42,7 @@ const displayData = () => {
   }
 };
 
-// getTravelData function receives the data from API calls and passes it onto 
+// getTravelData function receives the data from API calls and passes it onto
 // the displayData funciton
 const getTravelData = async () => {
   const destination = document.getElementById('tripto').value;
