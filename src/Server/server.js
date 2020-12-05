@@ -1,10 +1,9 @@
-import { getGeonamesData, getWeatherbitData, getPixabayData } from './API';
-
 const express = require('express');
 
 const bodyParser = require('body-parser');
 
 const cors = require('cors');
+const { getGeonamesData, getWeatherbitData, getPixabayData } = require('./API');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));

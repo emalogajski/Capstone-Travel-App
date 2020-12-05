@@ -12,4 +12,4 @@ const getWeatherbitData = (lat, lng) => axios.get(`${weatherBaseURL}?lat=${lat}&
 
 const getPixabayData = (destination) => axios.get(`${picBaseURL}?key=${picKey}&q=${destination}`);
 
-export { getGeonamesData, getPixabayData, getWeatherbitData };
+module.exports = { getGeonamesData, getPixabayData, getWeatherbitData };
