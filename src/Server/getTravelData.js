@@ -20,8 +20,15 @@ async function getTravelData(req, res) {
     lat, lng, temp, clouds, finalPicture,
   };
   res.send(data);
-}
+};
+
+const getTime = (req, res) => {
+  const today = new Date();
+  const time = `${today.getHours()} : ${today.getMinutes()}`;
+  res.send(time);
+};
 
 module.exports = {
   getTravelData,
+  getTime,
 };
